@@ -8,3 +8,20 @@
 * This is the pseudocode for homework 4. It will lay out the thought process and order of arguments for wycat.c
 *
 */
+
+main function{
+    if no arguments{
+        take input from user
+        output the input that was just received
+    }
+    else if arguments{
+        for amount of arguments{
+            if standard input( - ){
+                read standard input
+                output standard input
+            }else{
+                output the file's contents
+            }
+        }
+    }
+}
