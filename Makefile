@@ -16,7 +16,6 @@ RM= rm -f
 	$(CC) $(CFLAGS) wycat.c wycat
 
 wycat: wycat.c
-	$(CC) $(CFLAGS) -c wycat.c
 
 clean:
 	${RM} wycat
