@@ -15,8 +15,8 @@
 
 int main(int argc, char **argv){
     char str[100];
-    if(sizeof argv[] == 0){
-          gets(str);
+    if(sizeof argv == 0){
+          fgets(str);
           puts(str);
     }
     // for(int i = 0: i < argc; i++){
