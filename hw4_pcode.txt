@@ -1,0 +1,10 @@
+/*
+* hw4_pcode.txt
+* Author: Zachary Crimmel
+* Date: Feb 21, 2022
+*
+* COSC 3750, Homework 4
+*
+* This is the pseudocode for homework 4. It will lay out the thought process and order of arguments for wycat.c
+*
+*/
