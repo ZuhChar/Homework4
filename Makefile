@@ -13,7 +13,7 @@ CFLAGS= -Wall -ggdb
 RM= rm -f
 
 .PHONY: wycat clean tidy
-	$(CC) $(CFLAGS) wycat.c -o wycat
+	$(CC) $(CFLAGS) wycat.c wycat
 
 wycat: wycat.c
 	$(CC) $(CFLAGS) -c wycat.c
