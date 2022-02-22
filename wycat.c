@@ -11,10 +11,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <stdio.h>
 
 int main(int argc, char **argv){
     char str[100];
-    if(sizeof argv[i] == 0){
+    if(sizeof argv[] == 0){
           gets(str);
           puts(str);
     }
