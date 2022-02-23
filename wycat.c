@@ -16,7 +16,7 @@
 int main(int argc, char **argv){
     char buffer[4096];
     if(argc == 1){
-        fread(buffer, sizeof(buffer) + 1, 1, stdin)
+        fread(buffer, sizeof(buffer) + 1, 1, stdin);
         fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
         return 0;
     }
