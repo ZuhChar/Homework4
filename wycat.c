@@ -24,9 +24,8 @@ int main(int argc, char **argv){
             printf("Stdin");
         }
         FILE *fp = fopen(argv[i], "rw");
-        // fwrite(&fp, strlen(fp) + 1, 1, buffer);
         fread(buffer, sizeof(buffer) + 1, 1, fp);
-        printf(buffer);
+        fwrite(buffer, sizeof(buffer), 1, stdout);
         fclose(fp);
     }
     return 0;
