@@ -21,7 +21,7 @@ int main(int argc, char **argv){
     }
     for(int i = 1; i < argc; i++){
         if(strcmp(argv[i], "-") != 0){
-            fprint("Stdin");
+            fprintf("Stdin");
         }
         FILE *fp = fopen(argv[i], "rw");
         // fwrite(&fp, strlen(fp) + 1, 1, buffer);
