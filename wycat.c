@@ -7,6 +7,8 @@
 *
 * This is a simple version of the cat utility.
 * It is designed to print the contents of a file or read and write standard input if no arguments are given or if a '-' is given.
+* 
+* Collaborated with Ian Moon to work on this
 */
 #include <stdlib.h>
 #include <string.h>
