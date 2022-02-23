@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int main(int argc, char **argv){
     char buffer[4096];
@@ -19,8 +20,8 @@ int main(int argc, char **argv){
         return 0;
     }
     for(int i = 1; i < argc; i++){
-        if(argv[i] == "-"){
-
+        if(strcmp(argv[i], "-") != 0){
+            fprint("Stdin");
         }
         FILE *fp = fopen(argv[i], "rw");
         // fwrite(&fp, strlen(fp) + 1, 1, buffer);
