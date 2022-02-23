@@ -26,6 +26,9 @@ int main(int argc, char **argv){
             fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
         }
         FILE *fp = fopen(argv[i], "rw");
+        if(fp == NULL){
+            printf("You's a dumb bitch")
+        }
         fread(buffer, sizeof(buffer) + 1, 1, fp);
         fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
         fclose(fp);
