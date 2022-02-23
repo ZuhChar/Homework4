@@ -10,19 +10,22 @@
 */
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #include <stdio.h>
 
 int main(int argc, char **argv){
-    char str[1000];
+    char buffer[4096];
     if(argc == 1){
 
         return 0;
     }
     for(int i = 1; i < argc; i++){
-        FILE *fp = fopen(argv[i], "rw");
+        if(argv[i] == "-"){
 
-        printf("Hello World!\n");
+        }
+        FILE *fp = fopen(argv[i], "rw");
+        fread(&buffer, sizeof (char), 4096, fp);
+        fwrite(stdout, sizeof (char), 4096, &buffer);
+        fclose(fp);
     }
     return 0;
 }
