@@ -5,8 +5,8 @@
 *
 * COSC 3750, Homework 4
 *
-* This is a simple version of the cat utility. It is designed to print the contents of a file or read and write standard input if no arguments are given or if a '-' is given.
-*
+* This is a simple version of the cat utility.
+* It is designed to print the contents of a file or read and write standard input if no arguments are given or if a '-' is given.
 */
 #include <stdlib.h>
 #include <string.h>
@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 int main(int argc, char **argv){
-    char buffer[2048];
+    char buffer[4096];
     if(argc == 1){
         fread(buffer, sizeof(buffer) + 1, 1, stdin);
         fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
@@ -30,7 +30,7 @@ int main(int argc, char **argv){
             perror("wycat: Incorrect usage");
             printf("\n");
         }else{
-            fread(buffer, sizeof(buffer) + 1, 1, fp);
+            fread(buffer, 1, sizeof(buffer), fp);
             buffer[sizeof(buffer +1)]= '\0';
             fwrite(buffer, 1, sizeof(buffer), stdout);
             fclose(fp);
