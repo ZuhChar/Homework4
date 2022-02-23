@@ -26,12 +26,14 @@ int main(int argc, char **argv){
             fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
         }
         FILE *fp = fopen(argv[i], "rw");
-        if(fp == NULL){
-            printf("You's a dumb bitch");
+        if( fp == NULL ){
+            printf("No such file or directory");
+            fclose(fp);
+        }else{
+            fread(buffer, sizeof(buffer) + 1, 1, fp);
+            fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
+            fclose(fp);
         }
-        fread(buffer, sizeof(buffer) + 1, 1, fp);
-        fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
-        fclose(fp);
     }
     return 0;
 }
