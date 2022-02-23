@@ -22,7 +22,8 @@ int main(int argc, char **argv){
     }
     for(int i = 1; i < argc; i++){
         if(strcmp(argv[i], "-") == 0){
-            printf("Stdin");
+            fread(buffer, sizeof(buffer) + 1, 1, stdin);
+            fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
         }
         FILE *fp = fopen(argv[i], "rw");
         fread(buffer, sizeof(buffer) + 1, 1, fp);
@@ -31,6 +32,4 @@ int main(int argc, char **argv){
     }
     return 0;
 }
-/*
-000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-*/
+
