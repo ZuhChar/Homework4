@@ -14,11 +14,14 @@
 #include <stdio.h>
 
 int main(int argc, char **argv){
-    char str[100];
+    char str[1000];
     if(argc == 1){
+
         return 0;
     }
     for(int i = 1; i < argc; i++){
+        FILE *fp = fopen(argv[i], "rw");
+
         printf("Hello World!\n");
     }
     return 0;
