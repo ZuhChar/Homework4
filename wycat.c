@@ -32,7 +32,7 @@ int main(int argc, char **argv){
         }else{
             fread(buffer, sizeof(buffer) + 1, 1, fp);
             buffer[sizeof(buffer +1)]= '\0';
-            fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
+            fwrite(buffer, 1, sizeof(buffer), stdout);
             fclose(fp);
         }
     }
