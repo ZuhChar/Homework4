@@ -23,8 +23,8 @@ int main(int argc, char **argv){
 
         }
         FILE *fp = fopen(argv[i], "rw");
-        fread(&buffer, sizeof (char), 4096, fp);
-        fwrite(stdout, sizeof (char), 4096, &buffer);
+        fwrite(&fp, strlen(fp) + 1, 1, buffer);
+        fread(stdout, strlen(fp) + 1, 1, buffer);
         fclose(fp);
     }
     return 0;
