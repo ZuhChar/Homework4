@@ -15,12 +15,13 @@
 
 int main(int argc, char **argv){
     char str[100];
-    if(sizeof argv == 0){
-          fgets(str);
+    if(argc == 0){
+          fgets(str, 100, argv);
           puts(str);
     }
-    // for(int i = 0: i < argc; i++){
-        
-    // }
+    for(int i = 0: i < argc; i++){
+        FILE *fp;
+        fp= fopen(argv[i]);
+    }
     return 0;
 }
