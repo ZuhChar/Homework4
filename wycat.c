@@ -31,7 +31,7 @@ int main(int argc, char **argv){
             printf("\n");
         }else{
             fread(buffer, sizeof(buffer) + 1, 1, fp);
-            buffer[sizeof(buffer +1)]= '\0'
+            buffer[sizeof(buffer +1)]= '\0';
             fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
             fclose(fp);
         }
