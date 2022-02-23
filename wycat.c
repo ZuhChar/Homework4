@@ -27,7 +27,7 @@ int main(int argc, char **argv){
         }
         FILE *fp = fopen(argv[i], "rw");
         if(fp == NULL){
-            printf("You's a dumb bitch")
+            printf("You's a dumb bitch");
         }
         fread(buffer, sizeof(buffer) + 1, 1, fp);
         fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
