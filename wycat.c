@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 int main(int argc, char **argv){
-    char buffer[4096];
+    char buffer[];
     if(argc == 1){
         fread(buffer, sizeof(buffer) + 1, 1, stdin);
         fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
