@@ -28,7 +28,6 @@ int main(int argc, char **argv){
         FILE *fp = fopen(argv[i], "rw");
         if( fp == NULL ){
             perror("No such file or directory\n");
-            fclose(fp);
         }else{
             fread(buffer, sizeof(buffer) + 1, 1, fp);
             fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
