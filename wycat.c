@@ -15,11 +15,11 @@
 
 int main(int argc, char **argv){
     char str[100];
-    if(argc == 0){
+    if(argc == 1){
         return 0;
     }
-    for(int i = 0; i < argc; i++){
-        printf("Hello World!\ng");
+    for(int i = 1; i < argc; i++){
+        printf("Hello World!\n");
     }
     return 0;
 }
