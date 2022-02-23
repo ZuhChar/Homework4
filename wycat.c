@@ -15,7 +15,6 @@
 
 int main(int argc, char **argv){
     char buffer[4096];
-    char temp[4096];
     if(argc == 1){
         fread(buffer, sizeof(buffer) + 1, 1, stdin);
         fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
@@ -32,7 +31,6 @@ int main(int argc, char **argv){
             printf("\n");
         }else{
             fread(buffer, sizeof(buffer) + 1, 1, fp);
-            buffer[sizeof(buffer) + 1]= '\0';
             fwrite(buffer, sizeof(buffer) + 1, 1, stdout);
             fclose(fp);
         }
