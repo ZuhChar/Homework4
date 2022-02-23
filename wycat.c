@@ -16,7 +16,7 @@
 int main(int argc, char **argv){
     char buffer[4096];
     if(argc == 1){
-
+        fwrite(stdin, sizeof(buffer) + 1, 1, stdout);
         return 0;
     }
     for(int i = 1; i < argc; i++){
@@ -24,7 +24,7 @@ int main(int argc, char **argv){
             printf("Stdin");
         }
         FILE *fp = fopen(argv[i], "rw");
-        fread(buffer, strlen(fp) + 1, 1, fp);
+        fread(buffer, sizeof(buffer) + 1, 1, fp);
         fwrite(buffer, sizeof(buffer), 1, stdout);
         fclose(fp);
     }
